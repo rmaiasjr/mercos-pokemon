@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokedex</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/cards.css">
+    <link rel="stylesheet" href="./css/modal.css">
+</head>
+<body>
+
+    <header class="header">
+        <div> 
+            <!-- <h1>Pokémons</h1> -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png">
+        </div>
+        <div class="container-pesquisa">
+            <input type="search" id="textoPesquisa" placeholder="Buscar por nome ou ID..."/>
+            <button id="btnBuscar">Buscar</button>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Loading -->
+        <div id="loader" class="loader hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+                <circle stroke-width="15" r="15" cx="35" cy="100"><animate attributeName="cx" calcMode="spline" dur="2" values="35;165;165;35;35" keySplines="0 .1 .5 1;0 .1 .5 1;0 .1 .5 1;0 .1 .5 1" repeatCount="indefinite" begin="0"></animate>
+                </circle>
+                <circle stroke-width="15" opacity=".8" r="15" cx="35" cy="100"><animate attributeName="cx" calcMode="spline" dur="2" values="35;165;165;35;35" keySplines="0 .1 .5 1;0 .1 .5 1;0 .1 .5 1;0 .1 .5 1" repeatCount="indefinite" begin="0.05"></animate>
+                </circle>
+                <circle stroke-width="15" opacity=".6" r="15" cx="35" cy="100"><animate attributeName="cx" calcMode="spline" dur="2" values="35;165;165;35;35" keySplines="0 .1 .5 1;0 .1 .5 1;0 .1 .5 1;0 .1 .5 1" repeatCount="indefinite" begin=".1"></animate>
+                </circle>
+                <circle stroke-width="15" opacity=".4" r="15" cx="35" cy="100"><animate attributeName="cx" calcMode="spline" dur="2" values="35;165;165;35;35" keySplines="0 .1 .5 1;0 .1 .5 1;0 .1 .5 1;0 .1 .5 1" repeatCount="indefinite" begin=".15"></animate>
+                </circle>
+                <circle stroke-width="15" opacity=".2" r="15" cx="35" cy="100"><animate attributeName="cx" calcMode="spline" dur="2" values="35;165;165;35;35" keySplines="0 .1 .5 1;0 .1 .5 1;0 .1 .5 1;0 .1 .5 1" repeatCount="indefinite" begin=".2"></animate>
+                </circle>
+            </svg>
+        </div>
+
+        <!-- mensagens -->
+        <div id="mensagens" class="mensagens hidden"></div>
+        
+        <!-- Lista de Pokémons -->
+        <section id="listaPokemon" class="grid"></section>
+
+        <!-- Paginação -->
+        <div id="paginacao" class="paginacao">
+            <button id="btnAnterior">Anterior</button>
+            <span id="pgAtual"> --- </span>
+            <button id="btnProximo">Próximo</button>
+        </div>
+        
+        <!-- Detalhes do Pokémon -->
+        <section id="pokemonDetails"></section>
+
+    </main>
+
+    <!-- Modal -->
+    <div id="modalDetalhes" class="modal hidden">
+        <div class="modal-content">
+            <span id="fecharModal" class="close-modal">&times;</span>
+            
+            <div id="detalhePokemon"></div>
+                        
+        </div>
+    </div>
+
+    <script src="./js/utils.js"></script>
+    <script src="./js/componentes.js"></script>
+    <script src="./js/pokeapi.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

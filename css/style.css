@@ -1,0 +1,119 @@
+:root {
+    background: #071126;
+    color: #e6eef6;
+
+}
+
+body {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.hidden, .modal.hidden {
+    display: none !important;
+}
+
+.loader {
+    fill:#705898;
+    stroke:#705898;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    display: block;
+}
+
+
+header {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: space-between ;
+    margin-bottom: 18px;
+}
+
+header img {
+    width: 200px;
+    margin: 10px;
+}
+
+.container-pesquisa {
+    display: flex;
+    gap: 8px;
+    margin-right: 10px;
+}
+
+/* header no mobile */
+@media (max-width: 660px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header .container-pesquisa {
+        flex-direction: column; 
+        width: 100%;
+        justify-content: center;
+    }
+
+}
+
+#listaPokemon {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Mobile */
+    gap: 20px;
+    padding: 10px;
+    
+}
+
+/* desktop */
+@media (min-width: 508px) {
+    #listaPokemon {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.paginacao {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+
+button {
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 0;
+    background-color:#705898 ;
+    color:#ccc;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input[type="search"] {
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid #705898;
+    background: #ffffff1a;
+    color: inherit;
+    min-width: 300px;
+}
+
+.mensagens {
+    display: flex;
+    justify-content: center;
+}
+
+.mensagens .erros {
+    background-color: #f8d7da;
+    border: 1px solid #f1aeb5;
+    width: 80%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 16px;
+    color: #58151c;
+    font-size: 18px;
+    text-align: center;
+    
+}
