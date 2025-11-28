@@ -40,13 +40,17 @@ Desenvolvido como parte do Desafio PDM.
 
 ---
 
-## 🖼️ Screenshots
+## Screenshots
 
 ### Lista de porkemons
 ![Lista de porkemons](./screenshots/lista-pokemons.png)
 
 ### Paginação
 ![Paginação](./screenshots/paginacao.png)
+
+### Pesquisa
+![Pesquisa por ID](./screenshots/pesquisa-id.png)
+![Pesquisa por nome](./screenshots/pesquisa-nome.png)
 
 ### Detalhe do pokemon
 ![Detalhe do pokemon](./screenshots/modal-pokemon-detalhes.png)
